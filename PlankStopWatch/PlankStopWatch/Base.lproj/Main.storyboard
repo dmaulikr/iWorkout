@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PRv-t8-GlU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workouts-->
+        <scene sceneID="rFC-4x-GYL">
+            <objects>
+                <navigationController id="nhi-S0-wzV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" selectedImage="muscle" id="t67-76-kck"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bl-GS-ZLF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZQN-29-Up8" kind="relationship" relationship="rootViewController" id="2DM-Jk-sFx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-tL-QDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="937"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="mfb-Uo-tSV">
+            <objects>
+                <viewController id="ZQN-29-Up8" customClass="WorkoutListViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N9H-14-cRK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ekf-Xj-JK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCa-VC-AWG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-r7-C99">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutDayCell" id="UZx-Yf-ovH" customClass="WorkoutListTableViewCell" customModule="PlankStopWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZx-Yf-ovH" id="hhE-po-98d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaW-sg-hvS">
+                                                    <rect key="frame" x="28" y="8" width="93" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="93" id="rFa-aj-caA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1b-h2-D0Z">
+                                                    <rect key="frame" x="136" y="8" width="57" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="topMargin" secondItem="e1b-h2-D0Z" secondAttribute="top" id="JsI-NK-UgQ"/>
+                                                <constraint firstItem="oaW-sg-hvS" firstAttribute="leading" secondItem="hhE-po-98d" secondAttribute="leadingMargin" constant="20" id="TrD-LP-RF2"/>
+                                                <constraint firstAttribute="topMargin" secondItem="oaW-sg-hvS" secondAttribute="top" id="hjs-4s-G9o"/>
+                                                <constraint firstItem="e1b-h2-D0Z" firstAttribute="leading" secondItem="oaW-sg-hvS" secondAttribute="trailing" constant="15" id="ziL-a0-2um"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityLabel" destination="e1b-h2-D0Z" id="voJ-jg-kf4"/>
+                                            <outlet property="titleLabel" destination="oaW-sg-hvS" id="Ggg-UF-TBV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVb-r7-C99" firstAttribute="leading" secondItem="cCa-VC-AWG" secondAttribute="leadingMargin" constant="-16" id="OhM-en-U4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SVb-r7-C99" secondAttribute="trailing" constant="-16" id="UW6-5E-D9s"/>
+                            <constraint firstItem="SVb-r7-C99" firstAttribute="top" secondItem="N9H-14-cRK" secondAttribute="bottom" constant="-64" id="iE8-HH-Wsh"/>
+                            <constraint firstItem="Ekf-Xj-JK0" firstAttribute="top" secondItem="SVb-r7-C99" secondAttribute="bottom" id="zYh-nm-OgT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="muscle" id="swz-sg-A3Y"/>
+                    <navigationItem key="navigationItem" title="Workouts" id="HZa-bV-6wb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GIq-cR-uBx">
+                            <connections>
+                                <action selector="addWorkout:" destination="ZQN-29-Up8" id="0Sb-yP-dJw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="workoutTableView" destination="SVb-r7-C99" id="oCh-r1-ZFH"/>
+                        <segue destination="acc-Qq-1h4" kind="show" identifier="addWorkout" id="14D-Kd-7pI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="red-sP-lUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="936.88155922038993"/>
+        </scene>
+        <!--Add Workout-->
+        <scene sceneID="SUQ-wV-O9s">
+            <objects>
+                <viewController id="acc-Qq-1h4" customClass="AddWorkoutViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qud-d2-J34"/>
+                        <viewControllerLayoutGuide type="bottom" id="FJz-Lh-Zhg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K8h-Bz-G5f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-e8-dpD">
+                                <rect key="frame" x="139" y="137" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addTitle:" destination="acc-Qq-1h4" eventType="editingDidEnd" id="oeM-at-pdD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activity" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HA5-0c-Ndj">
+                                <rect key="frame" x="139" y="318" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addActivity:" destination="acc-Qq-1h4" eventType="editingDidEnd" id="2uD-Ot-CNR"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HA5-0c-Ndj" firstAttribute="top" secondItem="FEZ-e8-dpD" secondAttribute="bottom" constant="151" id="46d-Kt-iSo"/>
+                            <constraint firstItem="FEZ-e8-dpD" firstAttribute="top" secondItem="Qud-d2-J34" secondAttribute="bottom" constant="73" id="ZA9-oP-v16"/>
+                            <constraint firstItem="HA5-0c-Ndj" firstAttribute="centerX" secondItem="K8h-Bz-G5f" secondAttribute="centerX" id="nni-31-gQT"/>
+                            <constraint firstItem="FEZ-e8-dpD" firstAttribute="centerX" secondItem="K8h-Bz-G5f" secondAttribute="centerX" id="vcI-Zb-bgz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Workout" id="MzD-Rx-gro">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fyR-Zi-o8u">
+                            <connections>
+                                <action selector="cancelWorkout:" destination="acc-Qq-1h4" id="bdY-9s-MU2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xdM-l0-8Ek">
+                            <connections>
+                                <action selector="saveWorkout:" destination="acc-Qq-1h4" id="mOw-2a-Nuj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityTextField" destination="HA5-0c-Ndj" id="atl-YE-1lW"/>
+                        <outlet property="titleTextField" destination="FEZ-e8-dpD" id="YHS-Yz-816"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZp-7T-3Ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="937"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rIV-qq-V4Q">
+            <objects>
+                <tabBarController id="PRv-t8-GlU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fmf-lp-Hin">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="J83-sE-JpC" kind="relationship" relationship="viewControllers" id="YEH-dh-vI5"/>
+                        <segue destination="nhi-S0-wzV" kind="relationship" relationship="viewControllers" id="tOw-4R-06a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKg-55-FU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1633" y="544"/>
+        </scene>
+        <!--StopWatch-->
+        <scene sceneID="ir9-un-xJq">
+            <objects>
+                <navigationController id="J83-sE-JpC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="StopWatch" image="stopwatch-icon-26" selectedImage="stopwatch-icon-26" id="M0F-8A-Xj4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gPo-Rk-9ue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DgF-7N-Uug"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjJ-lW-JW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="143"/>
+        </scene>
+        <!--Planking StopWatch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k6-3d-DfD">
+                                <rect key="frame" x="71" y="535" width="78" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="63N-zA-RCM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnL-kL-h5r">
+                                <rect key="frame" x="225" y="535" width="78" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.13994237302282214" green="0.70161158376963351" blue="0.1857881546223526" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEc-d3-OzP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-dl-vIU">
+                                <rect key="frame" x="127" y="175" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Xvy-ro-R4j"/>
+                                    <constraint firstAttribute="height" constant="50" id="ka4-qQ-mEm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ge-DI-CgR">
+                                <rect key="frame" x="153" y="540" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zw-Lh-A4D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xnL-kL-h5r" secondAttribute="bottom" constant="91" id="DOd-XK-7i1"/>
+                            <constraint firstItem="1Ge-DI-CgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H5c-lB-xbf"/>
+                            <constraint firstItem="hDP-dl-vIU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="auB-pu-8nu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xnL-kL-h5r" secondAttribute="trailing" constant="56" id="gEJ-O3-F0i"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8k6-3d-DfD" secondAttribute="bottom" constant="91" id="jBU-P3-BFq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Ge-DI-CgR" secondAttribute="bottom" constant="91" id="kAO-cR-gkG"/>
+                            <constraint firstItem="8k6-3d-DfD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="sts-SH-zpv"/>
+                            <constraint firstItem="hDP-dl-vIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="zFk-hf-S9n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Planking StopWatch" id="wbE-sn-I5u"/>
+                    <connections>
+                        <outlet property="StartStop" destination="xnL-kL-h5r" id="anC-bi-E3R"/>
+                        <outlet property="TimeLabel" destination="hDP-dl-vIU" id="ffd-cR-9fn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="muscle" width="28" height="28"/>
+        <image name="stopwatch-icon-26" width="26" height="31"/>
+    </resources>
+</document>

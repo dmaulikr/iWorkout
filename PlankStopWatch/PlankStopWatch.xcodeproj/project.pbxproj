@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BAFA4C31E7CD99C00A4AFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */; };
+		2BAFA4C51E7CD99C00A4AFEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */; };
+		2BAFA4C81E7CD99C00A4AFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */; };
+		2BAFA4CA1E7CD99C00A4AFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C91E7CD99C00A4AFEE /* Assets.xcassets */; };
+		2BAFA4CD1E7CD99C00A4AFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFA4CB1E7CD99C00A4AFEE /* LaunchScreen.storyboard */; };
+		2BAFA4D81E7CD99C00A4AFEE /* PlankStopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4D71E7CD99C00A4AFEE /* PlankStopWatchTests.swift */; };
+		2BAFA4E31E7CD99C00A4AFEE /* PlankStopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4E21E7CD99C00A4AFEE /* PlankStopWatchUITests.swift */; };
+		2BAFA4F21E7CDAE200A4AFEE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */; };
+		2BE5A16E1E83AA7D0045179A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A16D1E83AA7D0045179A /* Workout.swift */; };
+		2BE5A1701E83ABF10045179A /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */; };
+		2BE5A1721E83AEF20045179A /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */; };
+		2BE5A1741E83B2780045179A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE5A1731E83B2780045179A /* CoreData.framework */; };
+		2BE5A17D1E83BB5E0045179A /* WorkoutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */; };
+		2BE5A1841E8502010045179A /* PlankStopWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BAFA4D41E7CD99C00A4AFEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BAFA4B71E7CD99C00A4AFEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BAFA4BE1E7CD99C00A4AFEE;
+			remoteInfo = PlankStopWatch;
+		};
+		2BAFA4DF1E7CD99C00A4AFEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BAFA4B71E7CD99C00A4AFEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BAFA4BE1E7CD99C00A4AFEE;
+			remoteInfo = PlankStopWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BAFA4BF1E7CD99C00A4AFEE /* PlankStopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankStopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BAFA4C71E7CD99C00A4AFEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BAFA4C91E7CD99C00A4AFEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BAFA4CC1E7CD99C00A4AFEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BAFA4CE1E7CD99C00A4AFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAFA4D31E7CD99C00A4AFEE /* PlankStopWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlankStopWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAFA4D71E7CD99C00A4AFEE /* PlankStopWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankStopWatchTests.swift; sourceTree = "<group>"; };
+		2BAFA4D91E7CD99C00A4AFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAFA4DE1E7CD99C00A4AFEE /* PlankStopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlankStopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAFA4E21E7CD99C00A4AFEE /* PlankStopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankStopWatchUITests.swift; sourceTree = "<group>"; };
+		2BAFA4E41E7CD99C00A4AFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2BE5A16D1E83AA7D0045179A /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		2BE5A1731E83B2780045179A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListTableViewCell.swift; sourceTree = "<group>"; };
+		2BE5A1831E8502010045179A /* PlankStopWatch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlankStopWatch.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BAFA4BC1E7CD99C00A4AFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE5A1741E83B2780045179A /* CoreData.framework in Frameworks */,
+				2BAFA4F21E7CDAE200A4AFEE /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4D01E7CD99C00A4AFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4DB1E7CD99C00A4AFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BAFA4B61E7CD99C00A4AFEE = {
+			isa = PBXGroup;
+			children = (
+				2BAFA4C11E7CD99C00A4AFEE /* PlankStopWatch */,
+				2BAFA4D61E7CD99C00A4AFEE /* PlankStopWatchTests */,
+				2BAFA4E11E7CD99C00A4AFEE /* PlankStopWatchUITests */,
+				2BAFA4C01E7CD99C00A4AFEE /* Products */,
+				2BAFA4F01E7CDAE200A4AFEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BAFA4C01E7CD99C00A4AFEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFA4BF1E7CD99C00A4AFEE /* PlankStopWatch.app */,
+				2BAFA4D31E7CD99C00A4AFEE /* PlankStopWatchTests.xctest */,
+				2BAFA4DE1E7CD99C00A4AFEE /* PlankStopWatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BAFA4C11E7CD99C00A4AFEE /* PlankStopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5A16D1E83AA7D0045179A /* Workout.swift */,
+				2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */,
+				2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */,
+				2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */,
+				2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */,
+				2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */,
+				2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */,
+				2BAFA4C91E7CD99C00A4AFEE /* Assets.xcassets */,
+				2BAFA4CB1E7CD99C00A4AFEE /* LaunchScreen.storyboard */,
+				2BAFA4CE1E7CD99C00A4AFEE /* Info.plist */,
+				2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */,
+			);
+			path = PlankStopWatch;
+			sourceTree = "<group>";
+		};
+		2BAFA4D61E7CD99C00A4AFEE /* PlankStopWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFA4D71E7CD99C00A4AFEE /* PlankStopWatchTests.swift */,
+				2BAFA4D91E7CD99C00A4AFEE /* Info.plist */,
+			);
+			path = PlankStopWatchTests;
+			sourceTree = "<group>";
+		};
+		2BAFA4E11E7CD99C00A4AFEE /* PlankStopWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFA4E21E7CD99C00A4AFEE /* PlankStopWatchUITests.swift */,
+				2BAFA4E41E7CD99C00A4AFEE /* Info.plist */,
+			);
+			path = PlankStopWatchUITests;
+			sourceTree = "<group>";
+		};
+		2BAFA4F01E7CDAE200A4AFEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5A1731E83B2780045179A /* CoreData.framework */,
+				2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BAFA4BE1E7CD99C00A4AFEE /* PlankStopWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAFA4E71E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatch" */;
+			buildPhases = (
+				2BAFA4BB1E7CD99C00A4AFEE /* Sources */,
+				2BAFA4BC1E7CD99C00A4AFEE /* Frameworks */,
+				2BAFA4BD1E7CD99C00A4AFEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlankStopWatch;
+			productName = PlankStopWatch;
+			productReference = 2BAFA4BF1E7CD99C00A4AFEE /* PlankStopWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BAFA4D21E7CD99C00A4AFEE /* PlankStopWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAFA4EA1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchTests" */;
+			buildPhases = (
+				2BAFA4CF1E7CD99C00A4AFEE /* Sources */,
+				2BAFA4D01E7CD99C00A4AFEE /* Frameworks */,
+				2BAFA4D11E7CD99C00A4AFEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BAFA4D51E7CD99C00A4AFEE /* PBXTargetDependency */,
+			);
+			name = PlankStopWatchTests;
+			productName = PlankStopWatchTests;
+			productReference = 2BAFA4D31E7CD99C00A4AFEE /* PlankStopWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BAFA4DD1E7CD99C00A4AFEE /* PlankStopWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAFA4ED1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchUITests" */;
+			buildPhases = (
+				2BAFA4DA1E7CD99C00A4AFEE /* Sources */,
+				2BAFA4DB1E7CD99C00A4AFEE /* Frameworks */,
+				2BAFA4DC1E7CD99C00A4AFEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BAFA4E01E7CD99C00A4AFEE /* PBXTargetDependency */,
+			);
+			name = PlankStopWatchUITests;
+			productName = PlankStopWatchUITests;
+			productReference = 2BAFA4DE1E7CD99C00A4AFEE /* PlankStopWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BAFA4B71E7CD99C00A4AFEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kireet Agrawal";
+				TargetAttributes = {
+					2BAFA4BE1E7CD99C00A4AFEE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BWW8PA3B8K;
+						ProvisioningStyle = Automatic;
+					};
+					2BAFA4D21E7CD99C00A4AFEE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BAFA4BE1E7CD99C00A4AFEE;
+					};
+					2BAFA4DD1E7CD99C00A4AFEE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BAFA4BE1E7CD99C00A4AFEE;
+					};
+				};
+			};
+			buildConfigurationList = 2BAFA4BA1E7CD99C00A4AFEE /* Build configuration list for PBXProject "PlankStopWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BAFA4B61E7CD99C00A4AFEE;
+			productRefGroup = 2BAFA4C01E7CD99C00A4AFEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BAFA4BE1E7CD99C00A4AFEE /* PlankStopWatch */,
+				2BAFA4D21E7CD99C00A4AFEE /* PlankStopWatchTests */,
+				2BAFA4DD1E7CD99C00A4AFEE /* PlankStopWatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BAFA4BD1E7CD99C00A4AFEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAFA4CD1E7CD99C00A4AFEE /* LaunchScreen.storyboard in Resources */,
+				2BAFA4CA1E7CD99C00A4AFEE /* Assets.xcassets in Resources */,
+				2BAFA4C81E7CD99C00A4AFEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4D11E7CD99C00A4AFEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4DC1E7CD99C00A4AFEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BAFA4BB1E7CD99C00A4AFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE5A1841E8502010045179A /* PlankStopWatch.xcdatamodeld in Sources */,
+				2BE5A17D1E83BB5E0045179A /* WorkoutListTableViewCell.swift in Sources */,
+				2BE5A1701E83ABF10045179A /* WorkoutListViewController.swift in Sources */,
+				2BAFA4C51E7CD99C00A4AFEE /* ViewController.swift in Sources */,
+				2BAFA4C31E7CD99C00A4AFEE /* AppDelegate.swift in Sources */,
+				2BE5A1721E83AEF20045179A /* AddWorkoutViewController.swift in Sources */,
+				2BE5A16E1E83AA7D0045179A /* Workout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4CF1E7CD99C00A4AFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAFA4D81E7CD99C00A4AFEE /* PlankStopWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAFA4DA1E7CD99C00A4AFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAFA4E31E7CD99C00A4AFEE /* PlankStopWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BAFA4D51E7CD99C00A4AFEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BAFA4BE1E7CD99C00A4AFEE /* PlankStopWatch */;
+			targetProxy = 2BAFA4D41E7CD99C00A4AFEE /* PBXContainerItemProxy */;
+		};
+		2BAFA4E01E7CD99C00A4AFEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BAFA4BE1E7CD99C00A4AFEE /* PlankStopWatch */;
+			targetProxy = 2BAFA4DF1E7CD99C00A4AFEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BAFA4C71E7CD99C00A4AFEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BAFA4CB1E7CD99C00A4AFEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BAFA4CC1E7CD99C00A4AFEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BAFA4E51E7CD99C00A4AFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BAFA4E61E7CD99C00A4AFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BAFA4E81E7CD99C00A4AFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BWW8PA3B8K;
+				INFOPLIST_FILE = PlankStopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2BAFA4E91E7CD99C00A4AFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BWW8PA3B8K;
+				INFOPLIST_FILE = PlankStopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2BAFA4EB1E7CD99C00A4AFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlankStopWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlankStopWatch.app/PlankStopWatch";
+			};
+			name = Debug;
+		};
+		2BAFA4EC1E7CD99C00A4AFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlankStopWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlankStopWatch.app/PlankStopWatch";
+			};
+			name = Release;
+		};
+		2BAFA4EE1E7CD99C00A4AFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PlankStopWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PlankStopWatch;
+			};
+			name = Debug;
+		};
+		2BAFA4EF1E7CD99C00A4AFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PlankStopWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PlankStopWatch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BAFA4BA1E7CD99C00A4AFEE /* Build configuration list for PBXProject "PlankStopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAFA4E51E7CD99C00A4AFEE /* Debug */,
+				2BAFA4E61E7CD99C00A4AFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAFA4E71E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAFA4E81E7CD99C00A4AFEE /* Debug */,
+				2BAFA4E91E7CD99C00A4AFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAFA4EA1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAFA4EB1E7CD99C00A4AFEE /* Debug */,
+				2BAFA4EC1E7CD99C00A4AFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAFA4ED1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAFA4EE1E7CD99C00A4AFEE /* Debug */,
+				2BAFA4EF1E7CD99C00A4AFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BE5A1831E8502010045179A /* PlankStopWatch.xcdatamodel */,
+			);
+			currentVersion = 2BE5A1831E8502010045179A /* PlankStopWatch.xcdatamodel */;
+			path = PlankStopWatch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BAFA4B71E7CD99C00A4AFEE /* Project object */;
+}
