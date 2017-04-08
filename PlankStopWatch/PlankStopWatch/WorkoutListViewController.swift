@@ -30,7 +30,9 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         fetchWorkoutsFromCoreData()
+        workoutTableView.reloadData()
     }
+    
     @IBAction func addWorkout(_ sender: Any) {
         performSegue(withIdentifier: "addWorkout", sender: "listView")
     }
@@ -52,8 +54,6 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = workoutTableView.dequeueReusableCell(withIdentifier: "workoutDayCell") as? WorkoutListTableViewCell {
             let workout = savedWorkouts[indexPath.row]
-            print(workout.title!)
-            print(workout.activity!)
             cell.titleLabel.text = workout.title
             cell.activityLabel.text = workout.activity
             return cell
