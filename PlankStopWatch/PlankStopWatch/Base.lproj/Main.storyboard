@@ -14,20 +14,20 @@
         <scene sceneID="rFC-4x-GYL">
             <objects>
                 <navigationController id="nhi-S0-wzV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" selectedImage="muscle" id="t67-76-kck"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="muscle" selectedImage="muscle" id="t67-76-kck"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bl-GS-ZLF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZQN-29-Up8" kind="relationship" relationship="rootViewController" id="2DM-Jk-sFx"/>
+                        <segue destination="1Y4-fx-Q8P" kind="relationship" relationship="rootViewController" id="Z9M-qs-dNC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-tL-QDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="937"/>
         </scene>
-        <!--Workouts-->
+        <!--Exercises-->
         <scene sceneID="mfb-Uo-tSV">
             <objects>
                 <viewController id="ZQN-29-Up8" customClass="WorkoutListViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,8 +89,7 @@
                             <constraint firstItem="Ekf-Xj-JK0" firstAttribute="top" secondItem="SVb-r7-C99" secondAttribute="bottom" id="zYh-nm-OgT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="muscle" id="swz-sg-A3Y"/>
-                    <navigationItem key="navigationItem" title="Workouts" id="HZa-bV-6wb">
+                    <navigationItem key="navigationItem" title="Exercises" id="HZa-bV-6wb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GIq-cR-uBx">
                             <connections>
                                 <action selector="addWorkout:" destination="ZQN-29-Up8" id="0Sb-yP-dJw"/>
@@ -104,7 +103,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="red-sP-lUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="936.88155922038993"/>
+            <point key="canvasLocation" x="1278" y="937"/>
+        </scene>
+        <!--Add Workout Day-->
+        <scene sceneID="Y7o-lP-PkW">
+            <objects>
+                <viewController id="xVc-eS-OAq" customClass="AddDayViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uJA-Sy-u4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="WUf-RA-PnH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7WR-35-jw5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-eo-bJF">
+                                <rect key="frame" x="45" y="318" width="284" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="MaW-fi-IjU"/>
+                                    <constraint firstAttribute="height" constant="30" id="ei4-uf-PAu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateDay:" destination="xVc-eS-OAq" eventType="editingDidEnd" id="DrA-LI-5sG"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6v-Rw-Tpt">
+                                <rect key="frame" x="45" y="264" width="284" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="T3a-8g-k9e"/>
+                                    <constraint firstAttribute="height" constant="46" id="xgK-tF-6PA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SQ3-eo-bJF" firstAttribute="centerX" secondItem="7WR-35-jw5" secondAttribute="centerX" id="1rk-sy-bWh"/>
+                            <constraint firstItem="SQ3-eo-bJF" firstAttribute="top" secondItem="v6v-Rw-Tpt" secondAttribute="bottom" constant="8" id="6XL-kV-Pfn"/>
+                            <constraint firstItem="v6v-Rw-Tpt" firstAttribute="centerX" secondItem="7WR-35-jw5" secondAttribute="centerX" id="833-OZ-H6A"/>
+                            <constraint firstItem="SQ3-eo-bJF" firstAttribute="centerY" secondItem="7WR-35-jw5" secondAttribute="centerY" id="wiu-eY-ZPd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Workout Day" id="8oV-v7-52T">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="g4a-hn-ieF">
+                            <connections>
+                                <action selector="cancelDay:" destination="xVc-eS-OAq" id="u5k-Np-9gF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="APT-3c-SkO">
+                            <connections>
+                                <action selector="saveWorkoutDay:" destination="xVc-eS-OAq" id="a4X-Rn-0VD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dayField" destination="SQ3-eo-bJF" id="SzV-mg-SVp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fde-GV-6gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.20000000000005" y="1700.5997001499252"/>
         </scene>
         <!--Add Workout-->
         <scene sceneID="SUQ-wV-O9s">
@@ -164,7 +227,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZp-7T-3Ai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="937"/>
+            <point key="canvasLocation" x="2118" y="937"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="BU3-hy-oDg">
+            <objects>
+                <viewController id="1Y4-fx-Q8P" customClass="DaysViewController" customModule="PlankStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j95-tX-oAf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hC1-s6-2WG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="me9-hs-DMt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2mK-ll-4mh">
+                                <rect key="frame" x="16" y="64" width="343" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="anI-6G-C27">
+                                    <size key="itemSize" width="145" height="101"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayCollectionViewCell" id="zhi-vx-dvw" customClass="DaysCollectionViewCell" customModule="PlankStopWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="101"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-Qg-fG2">
+                                                    <rect key="frame" x="31" y="35" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="JlK-Qg-fG2" firstAttribute="centerX" secondItem="zhi-vx-dvw" secondAttribute="centerX" id="XTP-ja-7RE"/>
+                                            <constraint firstItem="JlK-Qg-fG2" firstAttribute="centerY" secondItem="zhi-vx-dvw" secondAttribute="centerY" id="htw-7c-Gq9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="JlK-Qg-fG2" id="k8l-Ul-wej"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hC1-s6-2WG" firstAttribute="top" secondItem="2mK-ll-4mh" secondAttribute="bottom" constant="-64" id="B2q-7K-E21"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2mK-ll-4mh" secondAttribute="leading" id="VXv-5X-3ZR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2mK-ll-4mh" secondAttribute="trailing" id="aOg-Ue-RZq"/>
+                            <constraint firstItem="2mK-ll-4mh" firstAttribute="top" secondItem="j95-tX-oAf" secondAttribute="bottom" id="dFt-z4-Hw2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Workouts" id="KHD-2R-LER">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DXO-GF-iEI">
+                            <connections>
+                                <action selector="addDay:" destination="1Y4-fx-Q8P" id="QGe-rU-WFE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="daysCollectionView" destination="2mK-ll-4mh" id="BHk-bJ-Qmm"/>
+                        <segue destination="ZQN-29-Up8" kind="show" identifier="dayToExercises" id="99m-7K-cgO"/>
+                        <segue destination="xVc-eS-OAq" kind="show" identifier="addDaySegue" id="Xjv-WO-IV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIz-an-soR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="936.88155922038993"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rIV-qq-V4Q">
@@ -213,6 +349,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gua-i8-AP0">
+                                <rect key="frame" x="67" y="525" width="240" height="61"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k6-3d-DfD">
                                 <rect key="frame" x="71" y="535" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -233,6 +373,14 @@
                                     <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEc-d3-OzP"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYU-kK-AWK">
+                                <rect key="frame" x="67" y="136" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="EjJ-kh-Ycl"/>
+                                    <constraint firstAttribute="height" constant="128" id="IbU-lG-Ol3"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-dl-vIU">
                                 <rect key="frame" x="127" y="175" width="120" height="50"/>
                                 <constraints>
@@ -256,13 +404,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gua-i8-AP0" secondAttribute="trailing" constant="52" id="BTR-6Z-4fJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xnL-kL-h5r" secondAttribute="bottom" constant="91" id="DOd-XK-7i1"/>
                             <constraint firstItem="1Ge-DI-CgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H5c-lB-xbf"/>
+                            <constraint firstItem="gua-i8-AP0" firstAttribute="height" secondItem="8k6-3d-DfD" secondAttribute="height" id="WlZ-dQ-77o"/>
                             <constraint firstItem="hDP-dl-vIU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="auB-pu-8nu"/>
+                            <constraint firstItem="AYU-kK-AWK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1n-xV-pQd"/>
+                            <constraint firstItem="AYU-kK-AWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="cAb-uI-iRh"/>
+                            <constraint firstItem="gua-i8-AP0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="cNl-8I-oAA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xnL-kL-h5r" secondAttribute="trailing" constant="56" id="gEJ-O3-F0i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8k6-3d-DfD" secondAttribute="bottom" constant="91" id="jBU-P3-BFq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Ge-DI-CgR" secondAttribute="bottom" constant="91" id="kAO-cR-gkG"/>
                             <constraint firstItem="8k6-3d-DfD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="sts-SH-zpv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gua-i8-AP0" secondAttribute="bottom" constant="91" id="z6M-hh-4qi"/>
                             <constraint firstItem="hDP-dl-vIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="zFk-hf-S9n"/>
                         </constraints>
                     </view>
@@ -270,6 +424,8 @@
                     <connections>
                         <outlet property="StartStop" destination="xnL-kL-h5r" id="anC-bi-E3R"/>
                         <outlet property="TimeLabel" destination="hDP-dl-vIU" id="ffd-cR-9fn"/>
+                        <outlet property="lowerWrapper" destination="gua-i8-AP0" id="QKu-uS-Eme"/>
+                        <outlet property="wrapper" destination="AYU-kK-AWK" id="4oC-dn-IEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

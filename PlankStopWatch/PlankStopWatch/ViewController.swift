@@ -74,10 +74,20 @@ class ViewController: UIViewController {
     
     let speechSynth = AVSpeechSynthesizer()
     
+    @IBOutlet weak var wrapper: UIView!
+    @IBOutlet weak var lowerWrapper: UIView!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.cyan
+        self.view.backgroundColor = UIColor(hue: 0.5389, saturation: 1, brightness: 0.92, alpha: 1.0)
+        
+        
+        self.wrapper.layer.cornerRadius = 10
+        self.wrapper.layer.borderColor = UIColor.black.cgColor
+        
+        self.lowerWrapper.layer.cornerRadius = 5
+        self.lowerWrapper.layer.borderColor = UIColor.black.cgColor
         
         currentMaxAccelX = 0
         currentMaxAccelY = 0

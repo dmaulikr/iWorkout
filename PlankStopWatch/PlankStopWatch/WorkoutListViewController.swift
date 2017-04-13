@@ -34,7 +34,7 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func addWorkout(_ sender: Any) {
-        performSegue(withIdentifier: "addWorkout", sender: "listView")
+        performSegue(withIdentifier: "addWorkout", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

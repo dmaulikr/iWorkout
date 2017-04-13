@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B67A9E61E9F356F004628E4 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67A9E51E9F356F004628E4 /* DaysViewController.swift */; };
+		2B67A9E81E9F380E004628E4 /* DaysCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */; };
 		2BAFA4C31E7CD99C00A4AFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */; };
 		2BAFA4C51E7CD99C00A4AFEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */; };
 		2BAFA4C81E7CD99C00A4AFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		2BAFA4D81E7CD99C00A4AFEE /* PlankStopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4D71E7CD99C00A4AFEE /* PlankStopWatchTests.swift */; };
 		2BAFA4E31E7CD99C00A4AFEE /* PlankStopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4E21E7CD99C00A4AFEE /* PlankStopWatchUITests.swift */; };
 		2BAFA4F21E7CDAE200A4AFEE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */; };
+		2BC089821E9F4467003D7F21 /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC089811E9F4467003D7F21 /* AddDayViewController.swift */; };
 		2BE5A16E1E83AA7D0045179A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A16D1E83AA7D0045179A /* Workout.swift */; };
 		2BE5A1701E83ABF10045179A /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */; };
 		2BE5A1721E83AEF20045179A /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */; };
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B67A9E51E9F356F004628E4 /* DaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
+		2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAFA4BF1E7CD99C00A4AFEE /* PlankStopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankStopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		2BAFA4E21E7CD99C00A4AFEE /* PlankStopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankStopWatchUITests.swift; sourceTree = "<group>"; };
 		2BAFA4E41E7CD99C00A4AFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2BC089811E9F4467003D7F21 /* AddDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		2BE5A16D1E83AA7D0045179A /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
 		2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
@@ -114,14 +120,17 @@
 		2BAFA4C11E7CD99C00A4AFEE /* PlankStopWatch */ = {
 			isa = PBXGroup;
 			children = (
-				2BE5A16D1E83AA7D0045179A /* Workout.swift */,
 				2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */,
 				2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */,
-				2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */,
+				2B67A9E51E9F356F004628E4 /* DaysViewController.swift */,
+				2BC089811E9F4467003D7F21 /* AddDayViewController.swift */,
+				2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */,
 				2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */,
 				2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */,
-				2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */,
 				2BAFA4C91E7CD99C00A4AFEE /* Assets.xcassets */,
+				2BE5A16D1E83AA7D0045179A /* Workout.swift */,
+				2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */,
+				2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */,
 				2BAFA4CB1E7CD99C00A4AFEE /* LaunchScreen.storyboard */,
 				2BAFA4CE1E7CD99C00A4AFEE /* Info.plist */,
 				2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */,
@@ -294,10 +303,13 @@
 				2BE5A1841E8502010045179A /* PlankStopWatch.xcdatamodeld in Sources */,
 				2BE5A17D1E83BB5E0045179A /* WorkoutListTableViewCell.swift in Sources */,
 				2BE5A1701E83ABF10045179A /* WorkoutListViewController.swift in Sources */,
+				2B67A9E61E9F356F004628E4 /* DaysViewController.swift in Sources */,
+				2B67A9E81E9F380E004628E4 /* DaysCollectionViewCell.swift in Sources */,
 				2BAFA4C51E7CD99C00A4AFEE /* ViewController.swift in Sources */,
 				2BAFA4C31E7CD99C00A4AFEE /* AppDelegate.swift in Sources */,
 				2BE5A1721E83AEF20045179A /* AddWorkoutViewController.swift in Sources */,
 				2BE5A16E1E83AA7D0045179A /* Workout.swift in Sources */,
+				2BC089821E9F4467003D7F21 /* AddDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
