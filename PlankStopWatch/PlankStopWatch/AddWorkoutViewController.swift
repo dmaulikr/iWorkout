@@ -63,7 +63,7 @@ class AddWorkoutViewController: UIViewController {
         //performSegue(withIdentifier: "cancelWorkout", sender: "cancel")
     }
     
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -74,11 +74,9 @@ class AddWorkoutViewController: UIViewController {
             if let nextVC = segue.destination as? WorkoutListViewController {
                 
             }
-        } else if (segue.identifier! == "cancelWorkout") {
-            
         }
 
     }
-    
+    */
 
 }

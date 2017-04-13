@@ -16,7 +16,7 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var savedDays: [Day] = []
-    
+    var daySender: Day?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +32,6 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Do any additional setup after loading the view.
     }
     
-    /*func handleLongPress(gestureRecognizer : UILongPressGestureRecognizer){
-        
-        if (gestureRecognizer.state != UIGestureRecognizerState.ended){
-            return
-        }
-        
-        let p = gestureRecognizer.location(in: self.daysCollectionView)
-        
-        if let indexPath : NSIndexPath = (self.daysCollectionView?.indexPathForItem(at: p))! as NSIndexPath? {
-            let day = savedDays[indexPath.row]
-            context.delete(day)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            fetchDaysFromCoreData()
-            daysCollectionView.reloadData()
-            
-        }
-        
-    }*/
     
     @objc func handleLongPress(gesture : UILongPressGestureRecognizer!) {
         if gesture.state != .ended {
@@ -64,6 +46,8 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             fetchDaysFromCoreData()
             daysCollectionView.reloadData()
+            
+            //TODO: Add Alert to verify deletion
             
         } else {
             print("couldn't find index path")
@@ -81,6 +65,7 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        daySender = savedDays[indexPath.row]
         performSegue(withIdentifier: "dayToExercises", sender: self)
     }
     
@@ -91,8 +76,8 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = daysCollectionView.dequeueReusableCell(withReuseIdentifier: "dayCollectionViewCell", for: indexPath) as? DaysCollectionViewCell {
-            //let workout = savedWorkouts[indexPath.row]
-            cell.dayLabel.text = "Hello"
+            let day = savedDays[indexPath.row]
+            cell.dayLabel.text = day.dayTitle
             return cell
         }
         return UICollectionViewCell()
@@ -109,14 +94,21 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
             print("Failed to obtain the workouts boi")
         }
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier! == "dayToExercises") {
+            if let nextVC = segue.destination as? WorkoutListViewController {
+                if let daySender = daySender {
+                    nextVC.passedWorkouts = Array(daySender.workouts!) as! [Workout]
+                }
+            }
+        }
     }
-    */
+    
 
 }

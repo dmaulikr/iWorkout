@@ -11,6 +11,8 @@ import UIKit
 class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    var passedWorkouts: [Workout] = []
+    
     @IBOutlet weak var workoutTableView: UITableView!
     
     
