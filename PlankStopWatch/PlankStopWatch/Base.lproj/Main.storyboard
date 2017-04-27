@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,11 +89,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Exercises" id="HZa-bV-6wb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GIq-cR-uBx">
-                            <connections>
-                                <action selector="addWorkout:" destination="ZQN-29-Up8" id="0Sb-yP-dJw"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="GIq-cR-uBx">
+                                <connections>
+                                    <action selector="addWorkout:" destination="ZQN-29-Up8" id="0Sb-yP-dJw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="nxy-Ht-S1u">
+                                <connections>
+                                    <action selector="editOrder:" destination="ZQN-29-Up8" id="4mD-4y-AMX"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="workoutTableView" destination="SVb-r7-C99" id="oCh-r1-ZFH"/>

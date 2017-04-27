@@ -17,6 +17,9 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     var passedWorkouts: [Workout] = []
     var day: Day?
     
+    @IBAction func editOrder(_ sender: Any) {
+        workoutTableView.isEditing = !workoutTableView.isEditing
+    }
     @IBOutlet weak var workoutTableView: UITableView!
     
     
@@ -120,6 +123,19 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height * 0.1
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        var itemToMove = passedWorkouts[sourceIndexPath.row]
+        passedWorkouts.remove(at: sourceIndexPath.row)
+        passedWorkouts.insert(itemToMove, at: destinationIndexPath.row)
+        workoutTableView.reloadData()
     }
     
     func fetchWorkoutsFromCoreData() {
