@@ -14,6 +14,7 @@ class DaysCollectionViewCell: UICollectionViewCell {
     
     let w = UIScreen.main.bounds.width
     let h = UIScreen.main.bounds.height
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

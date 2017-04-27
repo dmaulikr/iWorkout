@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let API_KEY = "AIzaSyBCLB0hgrfZfTlKHadr69U4ZHitDWxLo-U"
+    var videoId: String?
     
     var passedWorkouts: [Workout] = []
+    var day: Day?
     
     @IBOutlet weak var workoutTableView: UITableView!
     
@@ -26,13 +30,30 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         workoutTableView.delegate = self
         workoutTableView.dataSource = self
-        fetchWorkoutsFromCoreData()
+        updatePassedWorkouts()
+        //fetchWorkoutsFromCoreData()
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        fetchWorkoutsFromCoreData()
+        //fetchWorkoutsFromCoreData()
+        updatePassedWorkouts()
         workoutTableView.reloadData()
+        
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = UIColor.black
+        let backgroundImage = UIImage(named: "fire")
+        let imageView = UIImageView(image: backgroundImage)
+        workoutTableView.backgroundView = imageView
+        
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        workoutTableView.insertSubview(blurView, at: 0)
+        
+        //workoutTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     @IBAction func addWorkout(_ sender: Any) {
@@ -45,17 +66,39 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let searchURL = "https://www.googleapis.com/youtube/v3/search"
+        let workoutTitle = passedWorkouts[indexPath.row].title!
+        let params = ["part": "snippet", "q": workoutTitle, "safeSearch": "moderate", "key": API_KEY, "maxResults": "1"]
+        
+        Alamofire.request(searchURL, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            
+            if let JSON = response.result.value {
+                
+                if let dictionary = JSON as? NSDictionary {
+                    print(dictionary)
+                    for item in dictionary["items"] as! NSArray {
+                        self.videoId = (item as AnyObject).value(forKeyPath: "id.videoId") as! String
+                        // TODO Create video objects off of the JSON response
+                        print(self.videoId)
+                        
+                    }
+                
+                    self.performSegue(withIdentifier: "showYoutubeVideo", sender: self)
+                }
+            }
+        }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(savedWorkouts.count)
-        return savedWorkouts.count
+        print(passedWorkouts.count)
+        return passedWorkouts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = workoutTableView.dequeueReusableCell(withIdentifier: "workoutDayCell") as? WorkoutListTableViewCell {
-            let workout = savedWorkouts[indexPath.row]
+            //let workout = savedWorkouts[indexPath.row]
+            let workout = passedWorkouts[indexPath.row]
             cell.titleLabel.text = workout.title
             cell.activityLabel.text = workout.activity
             return cell
@@ -65,14 +108,19 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let workout = savedWorkouts[indexPath.row]
+            //let workout = savedWorkouts[indexPath.row]
+            let workout = passedWorkouts[indexPath.row]
             context.delete(workout)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            fetchWorkoutsFromCoreData()
+            //fetchWorkoutsFromCoreData()
+            updatePassedWorkouts()
         }
         tableView.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.height * 0.1
+    }
     
     func fetchWorkoutsFromCoreData() {
         do {
@@ -81,15 +129,38 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
             print("Failed to obtain the workouts boi")
         }
     }
+    
+    func updatePassedWorkouts() {
+        do {
+            if (day != nil) {
+                passedWorkouts = try (Array(day!.workouts!) as! [Workout])
+            }
+        } catch {
+            print("Failed to update passed workouts ")
+        }
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier! == "addWorkout") {
+            if let nextVC = segue.destination as? AddWorkoutViewController {
+                if let day = day {
+                    nextVC.day = day
+                }
+            }
+        } else if (segue.identifier! == "showYoutubeVideo") {
+            if let nextVC = segue.destination as? YoutubeVideoViewController {
+                if let video = self.videoId {
+                    nextVC.videoId = video
+                }
+            }
+        }
     }
-    */
+ 
 
 }

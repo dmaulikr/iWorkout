@@ -23,6 +23,7 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         daysCollectionView.dataSource = self
         daysCollectionView.delegate = self
         fetchDaysFromCoreData()
+        daysCollectionView.reloadData()
         
         let lpgr : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongPress(gesture:)))
         lpgr.minimumPressDuration = 1.0
@@ -30,10 +31,32 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         lpgr.delaysTouchesBegan = true
         self.daysCollectionView?.addGestureRecognizer(lpgr)
         // Do any additional setup after loading the view.
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchDaysFromCoreData()
+        daysCollectionView.reloadData()
+        
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = UIColor.black
+        let backgroundImage = UIImage(named: "rain")
+        let imageView = UIImageView(image: backgroundImage)
+        daysCollectionView.backgroundView = imageView
+        
+        /*let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        daysCollectionView.insertSubview(blurView, at: 0)*/
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     @objc func handleLongPress(gesture : UILongPressGestureRecognizer!) {
+        //Used to delete a day from the collection view.
         if gesture.state != .ended {
             return
         }
@@ -41,28 +64,26 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let indexPath = self.daysCollectionView.indexPathForItem(at: p) {
             
-            let day = savedDays[indexPath.row]
-            context.delete(day)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            fetchDaysFromCoreData()
-            daysCollectionView.reloadData()
+            let alert = UIAlertController(title: "Delete your day", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler:
+                { action in
+                    let day = self.savedDays[indexPath.row]
+                    self.context.delete(day)
+                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                    self.fetchDaysFromCoreData()
+                    self.daysCollectionView.reloadData()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             
-            //TODO: Add Alert to verify deletion
+            self.present(alert, animated: true, completion: nil)
+            
             
         } else {
             print("couldn't find index path")
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        fetchDaysFromCoreData()
-        daysCollectionView.reloadData()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         daySender = savedDays[indexPath.row]
@@ -78,6 +99,11 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if let cell = daysCollectionView.dequeueReusableCell(withReuseIdentifier: "dayCollectionViewCell", for: indexPath) as? DaysCollectionViewCell {
             let day = savedDays[indexPath.row]
             cell.dayLabel.text = day.dayTitle
+            cell.backgroundColor = UIColor.init(colorLiteralRed: 0.96, green: 0.95, blue: 0.95, alpha: 1.0)
+            
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 2.0
+            cell.layer.cornerRadius = 10
             return cell
         }
         return UICollectionViewCell()
@@ -104,6 +130,7 @@ class DaysViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if (segue.identifier! == "dayToExercises") {
             if let nextVC = segue.destination as? WorkoutListViewController {
                 if let daySender = daySender {
+                    nextVC.day = daySender
                     nextVC.passedWorkouts = Array(daySender.workouts!) as! [Workout]
                 }
             }

@@ -30,8 +30,6 @@ class ViewController: UIViewController {
     
     func formattedTimeString(_ totalMilliSeconds: Int) -> String {
         
-        
-        
         let timeString = String(format: "%02d:%02d:%02d", Int((currentTimeInMilliSeconds / 600) % 60), Int((currentTimeInMilliSeconds / 10) % 60), Int(currentTimeInMilliSeconds % 10))
         return timeString
     }
@@ -74,17 +72,30 @@ class ViewController: UIViewController {
     
     let speechSynth = AVSpeechSynthesizer()
     
-    @IBOutlet weak var wrapper: UIView!
     @IBOutlet weak var lowerWrapper: UIView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(hue: 0.5389, saturation: 1, brightness: 0.92, alpha: 1.0)
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "rainbow")!)
         
-        self.wrapper.layer.cornerRadius = 10
-        self.wrapper.layer.borderColor = UIColor.black.cgColor
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(blurView, at: 0)
+        
+        /*self.view.backgroundColor = UIColor.clear
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //always fill the view
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+        self.view.insertSubview(blurEffectView, at: 0)*/
+        //if you have more UIViews, use an insertSubview API to place it where needed
+        
         
         self.lowerWrapper.layer.cornerRadius = 5
         self.lowerWrapper.layer.borderColor = UIColor.black.cgColor

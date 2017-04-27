@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B67A9E61E9F356F004628E4 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67A9E51E9F356F004628E4 /* DaysViewController.swift */; };
 		2B67A9E81E9F380E004628E4 /* DaysCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */; };
+		2B8C8A6D1EB00F2700FD4EDE /* YoutubeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C8A6C1EB00F2700FD4EDE /* YoutubeVideoViewController.swift */; };
 		2BAFA4C31E7CD99C00A4AFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */; };
 		2BAFA4C51E7CD99C00A4AFEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */; };
 		2BAFA4C81E7CD99C00A4AFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		2BE5A1741E83B2780045179A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE5A1731E83B2780045179A /* CoreData.framework */; };
 		2BE5A17D1E83BB5E0045179A /* WorkoutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */; };
 		2BE5A1841E8502010045179A /* PlankStopWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */; };
+		49DDC15793CEF23A5E849210 /* Pods_PlankStopWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435A270FFBAC12EA46257C92 /* Pods_PlankStopWatchTests.framework */; };
+		AE72E63D53D7717BDE420DDD /* Pods_PlankStopWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E5DDCAB28B098BAB3927CA /* Pods_PlankStopWatch.framework */; };
+		AFD15E1FDFD302321F2BA24E /* Pods_PlankStopWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BB3FEFBA4A7F8637D8C5D4 /* Pods_PlankStopWatchUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1567D52A65346FB6634F4438 /* Pods-PlankStopWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatch/Pods-PlankStopWatch.release.xcconfig"; sourceTree = "<group>"; };
+		22E492CB9170CEE190F86004 /* Pods-PlankStopWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatchTests/Pods-PlankStopWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B67A9E51E9F356F004628E4 /* DaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
 		2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B8C8A6C1EB00F2700FD4EDE /* YoutubeVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeVideoViewController.swift; sourceTree = "<group>"; };
 		2BAFA4BF1E7CD99C00A4AFEE /* PlankStopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankStopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +74,14 @@
 		2BE5A1731E83B2780045179A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListTableViewCell.swift; sourceTree = "<group>"; };
 		2BE5A1831E8502010045179A /* PlankStopWatch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlankStopWatch.xcdatamodel; sourceTree = "<group>"; };
+		2BEF85781EB00A7E004160B8 /* PlankStopWatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlankStopWatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		37BB3FEFBA4A7F8637D8C5D4 /* Pods_PlankStopWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlankStopWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		435A270FFBAC12EA46257C92 /* Pods_PlankStopWatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlankStopWatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E5DDCAB28B098BAB3927CA /* Pods_PlankStopWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlankStopWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F4703A286257789BBE429A /* Pods-PlankStopWatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatchTests/Pods-PlankStopWatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		948C0466DECED27D73011405 /* Pods-PlankStopWatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatchUITests/Pods-PlankStopWatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFDBB5E4546FA2D69FCC8935 /* Pods-PlankStopWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatch/Pods-PlankStopWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		D16BEF6E227AD768FDE9AFBB /* Pods-PlankStopWatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlankStopWatchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlankStopWatchUITests/Pods-PlankStopWatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +91,7 @@
 			files = (
 				2BE5A1741E83B2780045179A /* CoreData.framework in Frameworks */,
 				2BAFA4F21E7CDAE200A4AFEE /* CoreMotion.framework in Frameworks */,
+				AE72E63D53D7717BDE420DDD /* Pods_PlankStopWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DDC15793CEF23A5E849210 /* Pods_PlankStopWatchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +107,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD15E1FDFD302321F2BA24E /* Pods_PlankStopWatchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21400AEDAAD100D8D74C2AB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB5E4546FA2D69FCC8935 /* Pods-PlankStopWatch.debug.xcconfig */,
+				1567D52A65346FB6634F4438 /* Pods-PlankStopWatch.release.xcconfig */,
+				22E492CB9170CEE190F86004 /* Pods-PlankStopWatchTests.debug.xcconfig */,
+				84F4703A286257789BBE429A /* Pods-PlankStopWatchTests.release.xcconfig */,
+				948C0466DECED27D73011405 /* Pods-PlankStopWatchUITests.debug.xcconfig */,
+				D16BEF6E227AD768FDE9AFBB /* Pods-PlankStopWatchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B2D31281EAFEC3C00782073 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */,
+				2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		2BAFA4B61E7CD99C00A4AFEE = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +144,7 @@
 				2BAFA4E11E7CD99C00A4AFEE /* PlankStopWatchUITests */,
 				2BAFA4C01E7CD99C00A4AFEE /* Products */,
 				2BAFA4F01E7CDAE200A4AFEE /* Frameworks */,
+				21400AEDAAD100D8D74C2AB3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,19 +162,17 @@
 			isa = PBXGroup;
 			children = (
 				2BAFA4C21E7CD99C00A4AFEE /* AppDelegate.swift */,
-				2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */,
-				2B67A9E51E9F356F004628E4 /* DaysViewController.swift */,
+				2BEF857C1EB00A9C004160B8 /* ViewControllers */,
 				2BC089811E9F4467003D7F21 /* AddDayViewController.swift */,
-				2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */,
-				2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */,
 				2BE5A1711E83AEF20045179A /* AddWorkoutViewController.swift */,
+				2B2D31281EAFEC3C00782073 /* Cells */,
+				2BAFA4C61E7CD99C00A4AFEE /* Main.storyboard */,
 				2BAFA4C91E7CD99C00A4AFEE /* Assets.xcassets */,
 				2BE5A16D1E83AA7D0045179A /* Workout.swift */,
-				2BE5A17C1E83BB5E0045179A /* WorkoutListTableViewCell.swift */,
-				2B67A9E71E9F380E004628E4 /* DaysCollectionViewCell.swift */,
 				2BAFA4CB1E7CD99C00A4AFEE /* LaunchScreen.storyboard */,
 				2BAFA4CE1E7CD99C00A4AFEE /* Info.plist */,
 				2BE5A1821E8502010045179A /* PlankStopWatch.xcdatamodeld */,
+				2BEF85781EB00A7E004160B8 /* PlankStopWatch-Bridging-Header.h */,
 			);
 			path = PlankStopWatch;
 			sourceTree = "<group>";
@@ -161,8 +200,22 @@
 			children = (
 				2BE5A1731E83B2780045179A /* CoreData.framework */,
 				2BAFA4F11E7CDAE200A4AFEE /* CoreMotion.framework */,
+				70E5DDCAB28B098BAB3927CA /* Pods_PlankStopWatch.framework */,
+				435A270FFBAC12EA46257C92 /* Pods_PlankStopWatchTests.framework */,
+				37BB3FEFBA4A7F8637D8C5D4 /* Pods_PlankStopWatchUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BEF857C1EB00A9C004160B8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFA4C41E7CD99C00A4AFEE /* ViewController.swift */,
+				2B67A9E51E9F356F004628E4 /* DaysViewController.swift */,
+				2BE5A16F1E83ABF10045179A /* WorkoutListViewController.swift */,
+				2B8C8A6C1EB00F2700FD4EDE /* YoutubeVideoViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BAFA4E71E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatch" */;
 			buildPhases = (
+				91098E829F004904B1458FCF /* [CP] Check Pods Manifest.lock */,
 				2BAFA4BB1E7CD99C00A4AFEE /* Sources */,
 				2BAFA4BC1E7CD99C00A4AFEE /* Frameworks */,
 				2BAFA4BD1E7CD99C00A4AFEE /* Resources */,
+				0176B133AFC38C351E8D84C4 /* [CP] Embed Pods Frameworks */,
+				14D0E5B5A2B19F0A72B1B26A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BAFA4EA1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchTests" */;
 			buildPhases = (
+				B24F7A59AC2D5B166795CA97 /* [CP] Check Pods Manifest.lock */,
 				2BAFA4CF1E7CD99C00A4AFEE /* Sources */,
 				2BAFA4D01E7CD99C00A4AFEE /* Frameworks */,
 				2BAFA4D11E7CD99C00A4AFEE /* Resources */,
+				AE17506F8BD45CD3AEDA7B00 /* [CP] Embed Pods Frameworks */,
+				6FCD4886C1C5877B6399E2D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BAFA4ED1E7CD99C00A4AFEE /* Build configuration list for PBXNativeTarget "PlankStopWatchUITests" */;
 			buildPhases = (
+				D8897563B40CD46241C53341 /* [CP] Check Pods Manifest.lock */,
 				2BAFA4DA1E7CD99C00A4AFEE /* Sources */,
 				2BAFA4DB1E7CD99C00A4AFEE /* Frameworks */,
 				2BAFA4DC1E7CD99C00A4AFEE /* Resources */,
+				D42D0857DCCCC3D8187914CF /* [CP] Embed Pods Frameworks */,
+				AC9EDE780BA9D4DA6A5D2B28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +296,7 @@
 					2BAFA4BE1E7CD99C00A4AFEE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = BWW8PA3B8K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					2BAFA4D21E7CD99C00A4AFEE = {
@@ -295,6 +358,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0176B133AFC38C351E8D84C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatch/Pods-PlankStopWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14D0E5B5A2B19F0A72B1B26A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatch/Pods-PlankStopWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FCD4886C1C5877B6399E2D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatchTests/Pods-PlankStopWatchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91098E829F004904B1458FCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC9EDE780BA9D4DA6A5D2B28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatchUITests/Pods-PlankStopWatchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE17506F8BD45CD3AEDA7B00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatchTests/Pods-PlankStopWatchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24F7A59AC2D5B166795CA97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D42D0857DCCCC3D8187914CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlankStopWatchUITests/Pods-PlankStopWatchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8897563B40CD46241C53341 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BAFA4BB1E7CD99C00A4AFEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +503,7 @@
 			files = (
 				2BE5A1841E8502010045179A /* PlankStopWatch.xcdatamodeld in Sources */,
 				2BE5A17D1E83BB5E0045179A /* WorkoutListTableViewCell.swift in Sources */,
+				2B8C8A6D1EB00F2700FD4EDE /* YoutubeVideoViewController.swift in Sources */,
 				2BE5A1701E83ABF10045179A /* WorkoutListViewController.swift in Sources */,
 				2B67A9E61E9F356F004628E4 /* DaysViewController.swift in Sources */,
 				2B67A9E81E9F380E004628E4 /* DaysCollectionViewCell.swift in Sources */,
@@ -459,32 +661,40 @@
 		};
 		2BAFA4E81E7CD99C00A4AFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFDBB5E4546FA2D69FCC8935 /* Pods-PlankStopWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BWW8PA3B8K;
 				INFOPLIST_FILE = PlankStopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlankStopWatch/PlankStopWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2BAFA4E91E7CD99C00A4AFEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1567D52A65346FB6634F4438 /* Pods-PlankStopWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BWW8PA3B8K;
 				INFOPLIST_FILE = PlankStopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kireet.PlankStopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlankStopWatch/PlankStopWatch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		2BAFA4EB1E7CD99C00A4AFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22E492CB9170CEE190F86004 /* Pods-PlankStopWatchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +709,7 @@
 		};
 		2BAFA4EC1E7CD99C00A4AFEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F4703A286257789BBE429A /* Pods-PlankStopWatchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +724,7 @@
 		};
 		2BAFA4EE1E7CD99C00A4AFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948C0466DECED27D73011405 /* Pods-PlankStopWatchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PlankStopWatchUITests/Info.plist;
@@ -526,6 +738,7 @@
 		};
 		2BAFA4EF1E7CD99C00A4AFEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D16BEF6E227AD768FDE9AFBB /* Pods-PlankStopWatchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PlankStopWatchUITests/Info.plist;

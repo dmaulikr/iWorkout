@@ -13,12 +13,20 @@ class AddWorkoutViewController: UIViewController {
     
     var titleText: String?
     var activity: String?
+    var day: Day?
 
     @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "rain")!)
+        
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(blurView, at: 0)
 
         // Do any additional setup after loading the view.
     }
@@ -38,18 +46,29 @@ class AddWorkoutViewController: UIViewController {
     
     @IBAction func saveWorkout(_ sender: Any) {
         //Create Workout Model and save to core data
-        if ((titleText != nil) && (activity != nil)) {
-            let appDel = UIApplication.shared.delegate
-                as! AppDelegate
-            let context = appDel.persistentContainer.viewContext
-            let workout = Workout(context: context)
-            workout.title = titleText
-            workout.activity = activity
+        if ((activityTextField.text != nil && titleTextField.text != nil) || (titleText != nil) && (activity != nil)) {
             
-            appDel.saveContext()
+            if (day != nil) {
+                addTitle(self)
+                addActivity(self)
+                let appDel = UIApplication.shared.delegate
+                    as! AppDelegate
+                let context = appDel.persistentContainer.viewContext
+                let workout = Workout(context: context)
+                workout.title = titleText
+                workout.activity = activity
+                workout.dayOwner = day
+                appDel.saveContext()
+                
+            } else {
+                print("save failed")
+            }
+            
             
             //performSegue(withIdentifier: "saveWorkout", sender: "save")
             if let navController = self.navigationController {
+                let workoutListViewController = navController.parent as? WorkoutListViewController
+                workoutListViewController?.day = day
                 navController.popViewController(animated: true)
             }
         }

@@ -16,8 +16,15 @@ class AddDayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "rainbow")!)
         
-        self.view.backgroundColor = UIColor(hue: 0.5389, saturation: 1, brightness: 0.92, alpha: 1.0)
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(blurView, at: 0)
+
+        
         
         // Do any additional setup after loading the view.
     }
