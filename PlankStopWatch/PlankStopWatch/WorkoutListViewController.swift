@@ -16,6 +16,12 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     var passedWorkouts: [Workout] = []
     var day: Day?
+    var motivationMode = false
+    @IBOutlet weak var motivationButton: UIButton!
+    
+    @IBAction func changeMotivationMode(_ sender: Any) {
+        self.motivationMode = !self.motivationMode
+    }
     
     @IBAction func editOrder(_ sender: Any) {
         workoutTableView.isEditing = !workoutTableView.isEditing
@@ -31,6 +37,7 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.motivationButton.layer.cornerRadius = 5
         workoutTableView.delegate = self
         workoutTableView.dataSource = self
         updatePassedWorkouts()
@@ -71,7 +78,12 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchURL = "https://www.googleapis.com/youtube/v3/search"
         let workoutTitle = passedWorkouts[indexPath.row].title!
-        let params = ["part": "snippet", "q": workoutTitle, "safeSearch": "moderate", "key": API_KEY, "maxResults": "1"]
+        var workoutParam = workoutTitle
+        if motivationMode {
+            workoutParam = "motivation " + workoutTitle
+        }
+        print(workoutParam)
+        let params = ["part": "snippet", "q": workoutParam, "safeSearch": "moderate", "key": API_KEY, "maxResults": "1"]
         
         Alamofire.request(searchURL, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
@@ -85,8 +97,9 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
                         print(self.videoId)
                         
                     }
-                
-                    self.performSegue(withIdentifier: "showYoutubeVideo", sender: self)
+                    if (self.videoId != nil) {
+                        self.performSegue(withIdentifier: "showYoutubeVideo", sender: self)
+                    }
                 }
             }
         }

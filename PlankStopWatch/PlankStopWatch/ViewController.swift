@@ -150,13 +150,13 @@ class ViewController: UIViewController {
             let speech = AVSpeechUtterance(string: "Keep up the Good Work!")
             speech.pitchMultiplier = 0.9
             speechSynth.speak(speech)
-        } else if (fabs(pow(acceleration.z, 2.0)) + fabs(pow(acceleration.y, 2.0)) + fabs(pow(
+        } /* else if (fabs(pow(acceleration.z, 2.0)) + fabs(pow(acceleration.y, 2.0)) + fabs(pow(
             acceleration.x, 2.0)) < 1) {
             
             let speech = AVSpeechUtterance(string: "Keep Moving!")
             speech.pitchMultiplier = 0.9
             speechSynth.speak(speech)
-        }
+        } */
         
         
     }
@@ -188,7 +188,7 @@ class ViewController: UIViewController {
             let speech = AVSpeechUtterance(string: "Do not rotate!")
             speech.pitchMultiplier = 0.9
             speechSynth.speak(speech)
-        } else if (fabs(pow(rotation.z, 2.0)) + fabs(pow(rotation.y, 2.0)) + fabs(pow(
+        } /* else if (fabs(pow(rotation.z, 2.0)) + fabs(pow(rotation.y, 2.0)) + fabs(pow(
             rotation.x, 2.0)) < 0.4) {
             
             print(rotation.z)
@@ -197,7 +197,7 @@ class ViewController: UIViewController {
             let speech = AVSpeechUtterance(string: "Stay Steady and Straight!")
             speech.pitchMultiplier = 0.9
             speechSynth.speak(speech)
-        }
+        } */
     }
 }
 
