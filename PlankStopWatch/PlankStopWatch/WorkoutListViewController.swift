@@ -16,11 +16,17 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     
     var passedWorkouts: [Workout] = []
     var day: Day?
-    var motivationMode = false
+    var motivationMode = true
     @IBOutlet weak var motivationButton: UIButton!
     
     @IBAction func changeMotivationMode(_ sender: Any) {
         self.motivationMode = !self.motivationMode
+        if (self.motivationMode) {
+            motivationButton.setTitle("Motivation Mode", for: .normal)
+        } else {
+            motivationButton.setTitle("Instruction Mode", for: .normal)
+        }
+        
     }
     
     @IBAction func editOrder(_ sender: Any) {
