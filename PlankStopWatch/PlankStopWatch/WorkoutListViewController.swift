@@ -63,11 +63,11 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
         let imageView = UIImageView(image: backgroundImage)
         workoutTableView.backgroundView = imageView
         
-        let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+        /* let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurView = UIVisualEffectView(effect: blur)
         blurView.frame = self.view.bounds
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        workoutTableView.insertSubview(blurView, at: 0)
+        workoutTableView.insertSubview(blurView, at: 0)*/
         
         //workoutTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
