@@ -15,9 +15,11 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     var videoId: String?
     
     var passedWorkouts: [Workout] = []
+    var completedWorkouts: [Bool] = []
     var day: Day?
     var motivationMode = true
     @IBOutlet weak var motivationButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBAction func changeMotivationMode(_ sender: Any) {
         self.motivationMode = !self.motivationMode
@@ -27,6 +29,13 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
             motivationButton.setTitle("Instruction Mode", for: .normal)
         }
         
+    }
+    
+    @IBAction func resetCompletedWorkouts(_ sender: Any) {
+        for (index, element) in completedWorkouts.enumerated() {
+            completedWorkouts[index] = false
+        }
+        workoutTableView.reloadData()
     }
     
     @IBAction func editOrder(_ sender: Any) {
@@ -44,9 +53,11 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.motivationButton.layer.cornerRadius = 5
+        self.resetButton.layer.cornerRadius = 5
         workoutTableView.delegate = self
         workoutTableView.dataSource = self
         updatePassedWorkouts()
+
         //fetchWorkoutsFromCoreData()
         // Do any additional setup after loading the view.
         
@@ -55,6 +66,9 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         //fetchWorkoutsFromCoreData()
         updatePassedWorkouts()
+        for _ in passedWorkouts {
+            completedWorkouts.append(false)
+        }
         workoutTableView.reloadData()
         
         super.viewWillAppear(animated)
@@ -123,9 +137,25 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
             let workout = passedWorkouts[indexPath.row]
             cell.titleLabel.text = workout.title
             cell.activityLabel.text = workout.activity
+            cell.completedButton.tag = indexPath.row
+            cell.completedButton.addTarget(self, action: #selector(WorkoutListViewController.updateCompletedWorkouts), for: .touchUpInside)
+            if (completedWorkouts[indexPath.row]) {
+                cell.completedButton.setTitle("Complete", for: .normal)
+            } else {
+                cell.completedButton.setTitle("To Do", for: .normal)
+            }
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func updateCompletedWorkouts(sender: UIButton) {
+        print("Completed a Workout!")
+        print(completedWorkouts)
+        completedWorkouts[sender.tag] = !completedWorkouts[sender.tag]
+        print(completedWorkouts)
+        
+        workoutTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -137,7 +167,7 @@ class WorkoutListViewController: UIViewController, UITableViewDelegate, UITableV
             //fetchWorkoutsFromCoreData()
             updatePassedWorkouts()
         }
-        tableView.reloadData()
+        workoutTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

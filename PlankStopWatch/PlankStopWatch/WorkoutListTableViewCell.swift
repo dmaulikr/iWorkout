@@ -12,6 +12,7 @@ class WorkoutListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var completedButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="28" width="373" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZx-Yf-ovH" id="hhE-po-98d">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaW-sg-hvS">
@@ -64,24 +64,47 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4S-CY-A6A">
+                                                    <rect key="frame" x="295" y="6" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="l4S-CY-A6A" secondAttribute="trailing" constant="24" id="6uF-RR-9rK"/>
                                                 <constraint firstAttribute="topMargin" secondItem="oaW-sg-hvS" secondAttribute="top" id="GZI-fR-rjG"/>
                                                 <constraint firstItem="e1b-h2-D0Z" firstAttribute="top" secondItem="hhE-po-98d" secondAttribute="topMargin" constant="1" id="bPP-XA-vgn"/>
                                                 <constraint firstItem="oaW-sg-hvS" firstAttribute="leading" secondItem="hhE-po-98d" secondAttribute="leadingMargin" constant="20" id="j2q-JU-69k"/>
+                                                <constraint firstItem="l4S-CY-A6A" firstAttribute="top" secondItem="hhE-po-98d" secondAttribute="topMargin" constant="-2" id="lmK-m0-KSC"/>
                                                 <constraint firstItem="e1b-h2-D0Z" firstAttribute="leading" secondItem="oaW-sg-hvS" secondAttribute="trailing" constant="8" id="rvf-es-SlT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityLabel" destination="e1b-h2-D0Z" id="voJ-jg-kf4"/>
+                                            <outlet property="completedButton" destination="l4S-CY-A6A" id="vcU-AH-Dgd"/>
                                             <outlet property="titleLabel" destination="oaW-sg-hvS" id="Ggg-UF-TBV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-oC-Oi7">
-                                <rect key="frame" x="73" y="563" width="228" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-aU-DD4">
+                                <rect key="frame" x="31" y="563" width="116" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="IgP-LZ-Js4"/>
+                                    <constraint firstAttribute="height" constant="30" id="S7m-95-gBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetCompletedWorkouts:" destination="ZQN-29-Up8" eventType="touchUpInside" id="Gtw-hf-bLx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-oC-Oi7">
+                                <rect key="frame" x="183" y="563" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="nGR-gq-QUt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Motivation Mode"/>
                                 <connections>
@@ -92,13 +115,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Bc-oC-Oi7" firstAttribute="top" secondItem="SVb-r7-C99" secondAttribute="bottom" constant="8" id="3e6-kG-eCN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Bc-oC-Oi7" secondAttribute="trailing" constant="18" id="ESQ-fN-g9p"/>
+                            <constraint firstItem="eLs-aU-DD4" firstAttribute="leading" secondItem="cCa-VC-AWG" secondAttribute="leadingMargin" constant="15" id="Gpl-6k-fc9"/>
                             <constraint firstItem="SVb-r7-C99" firstAttribute="leading" secondItem="cCa-VC-AWG" secondAttribute="leadingMargin" constant="-15" id="OhM-en-U4Y"/>
+                            <constraint firstItem="Ekf-Xj-JK0" firstAttribute="top" secondItem="eLs-aU-DD4" secondAttribute="bottom" constant="25" id="T48-pe-Iry"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SVb-r7-C99" secondAttribute="trailing" constant="-15" id="UW6-5E-D9s"/>
-                            <constraint firstItem="4Bc-oC-Oi7" firstAttribute="leading" secondItem="cCa-VC-AWG" secondAttribute="leadingMargin" constant="57" id="Zc3-sT-1KY"/>
-                            <constraint firstItem="Ekf-Xj-JK0" firstAttribute="top" secondItem="4Bc-oC-Oi7" secondAttribute="bottom" constant="25" id="egd-PA-n1w"/>
                             <constraint firstItem="Ekf-Xj-JK0" firstAttribute="top" secondItem="SVb-r7-C99" secondAttribute="bottom" constant="63" id="hZk-CV-3PO"/>
                             <constraint firstItem="SVb-r7-C99" firstAttribute="top" secondItem="N9H-14-cRK" secondAttribute="bottom" constant="-64" id="iE8-HH-Wsh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Bc-oC-Oi7" secondAttribute="trailing" constant="58" id="tUA-dF-FXQ"/>
+                            <constraint firstItem="4Bc-oC-Oi7" firstAttribute="height" secondItem="eLs-aU-DD4" secondAttribute="height" id="kEX-5U-NXc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Exercises" id="HZa-bV-6wb">
@@ -117,6 +141,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="motivationButton" destination="4Bc-oC-Oi7" id="bBH-fd-eIM"/>
+                        <outlet property="resetButton" destination="eLs-aU-DD4" id="M2R-6u-41L"/>
                         <outlet property="workoutTableView" destination="SVb-r7-C99" id="oCh-r1-ZFH"/>
                         <segue destination="acc-Qq-1h4" kind="show" identifier="addWorkout" id="14D-Kd-7pI"/>
                         <segue destination="1TE-KB-ReU" kind="show" identifier="showYoutubeVideo" id="Ick-Q6-Ojy"/>
